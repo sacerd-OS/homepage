@@ -4,30 +4,25 @@
 @font-face {
   font-family: "Iosevka";
   src: url('fonts/woff2/iosevka-extended.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  */
 }
+
 @font-face {
   font-family: "Iosevka";
-  src: url('fonts/woff2/iosevka-extended.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-  */
-}
-@font-face {
-  font-family: "Iosevka";
-  src: url('fonts/woff2/iosevka-extended.woff2') format('woff2');
+  src: url('fonts/woff2/iosevka-extendedbold.woff2') format('woff2');
   font-weight: bold;
-  font-style: normal;
-  */
 }
+
 @font-face {
   font-family: "Iosevka";
-  src: url('fonts/woff2/iosevka-extended.woff2') format('woff2');
+  src: url('fonts/woff2/iosevka-extendeditalic.woff2') format('woff2');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Iosevka";
+  src: url('fonts/woff2/iosevka-extendedbolditalic.woff2') format('woff2');
   font-weight: bold;
   font-style: italic;
-  */
 }
 :root {
 	--main-background: #1e1e2e;
@@ -60,6 +55,15 @@
 
 	--maxwidth: 40rem;
   font-size: 16px;
+}
+
+.searchy{
+  color: #89dceb;
+}
+
+.august{
+  color: #a6e3a1;
+  font-weight: bold;
 }
 
 
@@ -389,7 +393,8 @@ header img {
 	border-radius: var(--border-radius);
 	margin: var(--margin-row) var(--margin-col);
 	padding: var(--margin-col);
-  font-weight: 800;
+  font-weight: bold;
+  font-style: italic;
 
   user-select: none;
 }
@@ -425,8 +430,12 @@ header img {
   background: transparent;
   color: var(--main-accent);
 
-  padding: 0.3rem 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem; 
+  padidng-left: 1rem;
+  padding-right: 1rem;
   font-weight: 800;
+  text-align: center;
 
   overflow: hidden;
   text-overflow: ellipsis;
