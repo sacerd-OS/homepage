@@ -69,7 +69,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Iosevka", sans-serif;
+  font-family: "Iosevka", monospace;
   font-size: 0.9rem;
   margin: 0;
   padding: 0;
@@ -350,7 +350,7 @@ header img {
   padding: 0;
   margin: 0;
 
-  font-family: "Cascadia";
+  font-family: "Iosevka";
   font-weight: 300;
   color: #a3a5aa;
 
