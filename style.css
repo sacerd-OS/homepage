@@ -89,7 +89,7 @@ body {
 /** {
 	box-sizing: border-box;
 }*/
-.hidden {display:none !important;}
+//..hidden {display:none !important;}
 .flex {display: flex; align-items: center}
 .marright {margin-right: 7px;}
 .normal-ul {padding-inline-start: 1.2rem;}
@@ -380,7 +380,7 @@ header img {
 .search:hover { border: var(--border-size) solid var(--green); }
 .search form { display: inline; }
 .search input:focus { outline: none; }
-.search input[type="text"] { width: 80%; }
+.search input[type="text"] { width: 60%; }
 
 /* greeting */
 .greeting {

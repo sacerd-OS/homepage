@@ -17,8 +17,8 @@
 /*slim*/
 /*.container.slim { --maxwidth: 32rem; }*/
 
-/*thicc*/
-/*.container.thicc { --maxwidth: 55rem; }*/
+
+.container.thicc { --maxwidth: 55rem; }*/
 
 /*thicc & slim - cancel each other out*/
 /*.container.thicc.slim { --maxwidth: 40rem; }*/
@@ -105,12 +105,6 @@
 
 /*no pic*/
 .container.nopic header { display: none; } 
-
-/*no title*/
-.container.notitle .col .title { display: none; }
-
-/*no greeting*/
-.container.nogreeting .greeting { display: none; } 
 
 /*no clock*/
 .container.noclock #clock { display: none; }

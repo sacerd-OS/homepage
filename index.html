@@ -7,112 +7,52 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="style.css" /> <!-- main stylesheet -->
 	<link rel="stylesheet" href="layout.css" /> <!-- conditional css logic for layout -->
-	<script src="observe.js"></script>
-	<script src="sortable.js"></script>
-	<script src="main.js"></script> <!-- first set up the observer object -->
-	<script src="settings.js"></script> <!-- load from Localstorage and make settings object-->
 	<title>Firefox - sacerdOS</title>
-	<style id="styles"></style>
-	<style id="customfont"></style>
 </head>
 
 <body>
-	<div id="settings-screen-left" class="hidden">
-		<div id="layout-settings"></div>
-		<div id="setting-footer">
-			<button class="rb-button hook-save-btn">SAVE</button>
-			<button class="rb-button hook-close-btn">CLOSE</button>
-			<span id="savedmsg" class="invis">Saved!</span>
-		</div>
-	</div>
-	<div id="settings-screen-right" class="hidden">
-		<div id="backup-screen">
-			<span id="backup-title-span">
-				<h1 class="title setting-title">Backup</h1>
-				<!--<button class="rb-button smolbtn" id="backup-close">&times;</button>-->
-			</span>
-
-			<p>Here you can import and export backups. They will get exported in json. Backups contain links and all
-				settings.</p><br>
-			<span class="impexp-span"><input type="text" class="rb-input impexp-span"><button class="rb-button"
-					id="import-json">import backup</button></span>
-			<span class="impexp-span"><input type="text" class="rb-input impexp-span"><button class="rb-button"
-					id="export-json">export backup</button></span>
-		</div>
-		<div id="links-screen">
-			<div id="link-settings" draggable="false">
-				<span class="flex">
-					<h1 class="setting-title" draggable="false">Links </h1>&nbsp;&nbsp;(drag & drop to reorder)&nbsp;&nbsp;(recommend. max 8/col)&nbsp;&nbsp;(hit save after)
-				</span>
-				<div id="link-add-bar">
-					<form id="add-link">
-						<span class="add-link-top-wrap">
-							<input type="text" class="rb-input" name="link-name" autocomplete="off" required placeholder="name" id="add-link-name">
-							<input type="text" class="rb-input" name="link-url" autocomplete="off" required placeholder="url" id="add-link-url">
-							<input type="submit" value="add link" class="rb-button">
-						</span>
-						<!-- <span class="add-link-replace-text setting">
-							<p class="setting-title">replace link if names are the same?</p>
-							<label class="switch">
-								<input class="s-update" type="checkbox" checked id="add-link-replace" name="link-replace-checkbox" />
-								<div class="slider round"></div>
-							</label>
-						</span> -->
-					</form>
-				</div>
-				<br>
-				<div id="sortable-colwrap" draggable="false">
-					<div class="sortable-col" draggable="false" id="sortable-col1"></div>
-					<div class="sortable-col" draggable="false" id="sortable-col2"></div>
-					<div class="sortable-col" draggable="false" id="sortable-col3"></div>
-				</div>
-				<ul class="normal-ul">
-					<li>rightclick a link here to edit it</li>
-					<li>you can change the color theme in style.css</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div id="container" class="container cols-3 nogreeting">
+	<div id="container" class="container cols-3 leftpic">
 		<header>
-			<img src="img/girlie.png" id="main-img"/>
+			<img src="img/background.png" id="main-img">
 		</header>
-		<div id="clock">
-			<span class="clockdigit">0</span>
-			<span class="clockdigit">1</span>
-			<span class="clockdigit">-</span>
-			<span class="clockdigit">0</span>
-			<span class="clockdigit">3</span>
-		</div>
 		<div class="search">
-			Search
+			august@mathilda ~ search:
 			<form method="get" target="_blank" name="search" action="https://www.google.com/search?q=">
-				<input type="text" autofocus="autofocus" name="q" autocomplete="off" />
+				<input type="text" autofocus="autofocus" name="q" autocomplete="off">
 			</form>
 		</div>
 		<div class="colwrap">
-			<h1 class="title greeting">heya <span class="accent">~</span> </h1>
+			<h1 class="title greeting">ciao salut <span class="accent">~</span></h1>
 			<div class="col first-col" id="col-1">
-				<div class="title col1Title">google</div>
+				<div class="title col1Title">links</div>
 				<!--add some sort of a placeholder here-->
-			</div>
+			<a href="#" title="link 1" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 1</span></a><a href="#" title="link 2" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 2</span></a><a href="#" title="link 3" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 3</span></a><a href="#" title="link 4" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 4</span></a><a href="#" title="link 5" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 5</span></a></div>
 			<div class="col second-col" id="col-2">
-				<div class="title col2Title">social Media</div>
+				<div class="title col2Title">social</div>
 				<!--add some sort of a placeholder here-->
-			</div>
+			<a href="#" title="link 1" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 1</span></a><a href="#" title="link 2" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 2</span></a><a href="#" title="link 3" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 3</span></a><a href="#" title="link 4" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 4</span></a><a href="#" title="link 5" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 5</span></a></div>
 			<div class="col third-col" id="col-3">
-				<div class="title col3Title">others</div>
+				<div class="title col3Title">other</div>
 				<!--add some sort of a placeholder here-->
-			</div>
+			<a href="#" title="link 1" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 1</span></a><a href="#" title="link 2" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 2</span></a><a href="#" title="link 3" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 3</span></a><a href="#" title="link 4" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 4</span></a><a href="#" title="link 5" target="_self" class="links" draggable="false"><span class="accent">~</span>
+            <span class="link-text">link 5</span></a></div>
 		</div>
 	</div>
-	<button class="toggle smolbtn" id="toggle" aria-label="toggle image">
-		&#9680;
-	</button>
-	<button class="settings smolbtn" id="settings" aria-label="open settings">
-		&#9881;
-	</button>
-	<img id="testimg" hidden>
+	<img id="testimg" src="img/background.png" hidden="">
 </body>
 
 </html>
