@@ -2,33 +2,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 @font-face {
-  font-family: "Cascadia";
-  src: url('fonts/CascadiaMono.woff2') format('woff');
+  font-family: "Iosevka";
+  src: url('fonts/woff2/iosevka-extended.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  */
+}
+@font-face {
+  font-family: "Iosevka";
+  src: url('fonts/woff2/iosevka-extended.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  */
+}
+@font-face {
+  font-family: "Iosevka";
+  src: url('fonts/woff2/iosevka-extended.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  */
+}
+@font-face {
+  font-family: "Iosevka";
+  src: url('fonts/woff2/iosevka-extended.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  */
 }
 :root {
-	/*
-  --main-background: #1e222a;
-  --main-card-background: #282c34;
-  --main-card-bg-secondary: #363b46;
-  --main-text-color: #dddddd;
-  --main-text-color-secondary: #aaaaaa;
-  --main-accent: #536785;
-  --main-accent-secondary: #536785;
-	*/
-	/*rosebox*/
-	
-	--main-background: #222222;
-	--main-card-background: #262626;
-  --main-card-bg-secondary: #303030;
-	--main-text-color: rgba(255, 255, 255, 0.8);
-	--main-text-color-secondary: #a3a5aa;
-  --main-accent: #a57562;
-  --main-accent-secondary: rgba(165, 117, 98, 0.2);
+	--main-background: #1e1e2e;
+	--main-card-background: #181825;
+  --main-card-bg-secondary: #11111b;
+	--main-text-color: rgba(205, 214, 244, 0.8);
+	--main-text-color-secondary: #cdd6f4;
+  --main-accent: #b4befe;
+  --main-accent-secondary: rgba(203, 166, 247, 0.5);
 	
 
-  --green: #98c379;
-  --cyan: #61afef;
-  --red: #e06c75;
+  --green: #a6e3a1;
+  --cyan: #89dceb;
+  --red: #f38ba8;
 
   --border-radius: 7.5px;
   --border-size: 0px;
@@ -56,7 +69,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Iosevka", sans-serif;
   font-size: 0.9rem;
   margin: 0;
   padding: 0;
@@ -64,6 +77,13 @@ body {
   min-height: 100vh;
 
   overflow-x: hidden;
+}
+
+::selection {
+  background: #585b70; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #585b70; /* Gecko Browsers */
 }
 
 /** {
