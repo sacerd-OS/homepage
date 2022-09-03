@@ -37,9 +37,12 @@
   --green: #a6e3a1;
   --cyan: #89dceb;
   --red: #f38ba8;
+  --rosewater: #f5e0dc;
+  --peach: #fab387;
+  --mauve: #cba6f7;
 
   --border-radius: 7.5px;
-  --border-size: 0px;
+  --border-size: 2px;
 
   --margin-col: 10px;
   --margin-row: 10px;
@@ -83,6 +86,21 @@ body {
   overflow-x: hidden;
 }
 
+body::after {
+  content: "";
+  background: url("img/Sunshine_5600x2800.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
 ::selection {
   background: #585b70; /* WebKit/Blink Browsers */
 }
@@ -98,196 +116,6 @@ body {
 .marright {margin-right: 7px;}
 .normal-ul {padding-inline-start: 1.2rem;}
 
-/*settings*/
-#settings-screen-left, #settings-screen-right {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  max-width: 32rem;
-  width: calc( 100% - 2rem);
-  height: calc(100% - 4rem);
-
-  margin: 2rem 1rem;
-  padding: 0 1rem;
-  background: var(--main-card-background);
-  border-radius: var(--border-radius);
-
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-
-  transition: all 1s ease-in-out;
-  z-index: 4;
-}
-#settings-screen-left #layout-settings {
-  flex-grow: 1;
-}
-#settings-screen-right {
-  left: initial;
-  right: 0; 
-}
-
-#settings, #toggle {
-  width: min-content;
-}
-
-#backup-title-span {
-  display: flex;
-  align-items: center;
-}
-#backup-title-span h1 {
-  flex-grow: 1;
-}
-#backup-close {
-  font-weight: bold;
-  font-size: 1rem;
-  position: relative !important; 
-  height: min-content;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#setting-footer {
-  margin-top: 1rem;
-  background: var(--main-card-bg-secondary);
-  padding: 0.7rem;
-  border-radius: var(--border-radius);
-  position: relative;
-  bottom: 0.7rem;
-  position: sticky;
-}
-.hook-close-btn, .hook-save-btn {
-  position: relative;
-  margin-left: .5rem;
-  padding: .5rem;
-}
-.setting:not(.heading) {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 30px;
-  color: var(--main-text-color-secondary);
-}
-.setting .setting-title {
-  width: 100%;
-  font-size: 1.20rem;
-  display: flex;
-  align-items:center;
-}
-.setting h1.setting-title {
-  font-size: 1.70rem;
-  color: var(--main-text-color);
-}
-.setting .setting-desc {
-  border: 2px solid var(--main-accent-secondary);
-  color: var(--main-text-color);
-  background: var(--main-accent-secondary);
-  opacity: 0.7;
-  cursor: pointer;
-  border-radius: 100px;
-  height: calc(34px * 0.7);
-  width: calc(34px * 0.7);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.setting .setting-desc.inline {
-  height: 100%;
-  max-height: 100%;
-  line-height: 100%;
-  margin: 0 0.5rem;
-  font-size: 1rem;
-}
-.impexp-span {
-  width: 100%;
-  display: flex;
-}
-
-/*settings link stuff*/
-#sortable-colwrap {
-  display: grid;
-  grid-template: 1fr / repeat(3, 1fr);
-  grid-template-areas:
-  "col1 col2 col3";
-  column-gap: 0.5rem;
-}
-.sortable-col#sortable-col1 {grid-area:"col1"}
-.sortable-col#sortable-col2 {grid-area:"col2"}
-.sortable-col#sortable-col3 {grid-area:"col3"}
-
-.sortable-col {
-  display: grid;
-  align-content: start;
-}
-.sortable-col .links {
-  color: var(--main-text-color-secondary);
-  text-decoration: none;
-  font-size: 1.2rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--main-card-background);
-
-  cursor: grab;
-  user-select: none;
-}
-.sortable-col .links .accent {
-  padding-right: 0;
-  cursor: pointer;
-  user-select: none;
-}
-.sortable-col .links .accent:hover {
-  color: var(--red);
-}
-#link-settings * {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-#link-add-bar {
-  display: flex;
-}
-#add-link {
-  width: 100%;
-  column-gap: .5rem;
-}
-#add-link .rb-input {
-  width: 100%;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-.add-link-top-wrap {
-  display: flex;
-  width: 100%;
-  column-gap: .5rem;
-}
-.add-link-replace-text {
-  width: 100%;
-  max-width: max-content;
-  height: min-content;
-}
-
-#savedmsg {
-  float: right;
-  color: gray;
-  font-weight: bold;
-}
-.fade {
-  transition: opacity 3s ease-in-out;
-}
-.invis {
-  opacity: 0;
-}
-
-.sortable-col .links-ghost {
-  background-color: var(--cyan);
-  opacity: 0;
-}
-
 /*container*/
 .container {
   display: grid;
@@ -297,6 +125,9 @@ body {
     "clock colwrap";
   grid-template-columns: min-content 3fr;
   grid-template-rows: minmax(var(--min-pic-height-short), 1fr) 1fr 1fr;
+  background: rgba(30, 30, 46,0.9);
+  border-radius: var(--border-radius);
+  padding: 1rem;
 
   width: 100%;
   max-width: var(--maxwidth);
@@ -308,8 +139,10 @@ header {
   margin: var(--margin-row) var(--margin-col);
   border-radius: var(--border-radius);
   overflow: hidden;
-  border: var(--border-size) solid var(--main-background);
-  max-height: 200px;
+  border: var(--border-size) solid var(--peach);
+  transition-property: border;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
 
   /*display: grid;
   grid-template: 1fr / 1fr;
@@ -371,7 +204,10 @@ header img {
   margin: var(--margin-row) var(--margin-col);
   border-radius: var(--border-radius);
   overflow: hidden;
-  border: var(--border-size) solid var(--main-background);
+  border: var(--border-size) solid var(--peach);
+  transition-property: border;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
 }
 .search input {
   background: none;
@@ -395,8 +231,16 @@ header img {
 	padding: var(--margin-col);
   font-weight: bold;
   font-style: italic;
+  border: var(--border-size) solid var(--main-accent);
+  transition-property: border;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
 
   user-select: none;
+}
+
+.greeting:hover {
+  border: var(--border-size) solid var(--green);
 }
 
 /*columns*/
@@ -414,7 +258,10 @@ header img {
   padding: 0;
   display: grid;
   overflow: hidden;
-  border: var(--border-size) solid var(--main-background);
+  border: var(--border-size) solid var(--mauve);
+  transition-property: border;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
 	background-color: var(--main-card-background);
 	border-radius: var(--border-radius);
 	margin: var(--margin-row) var(--margin-col);
