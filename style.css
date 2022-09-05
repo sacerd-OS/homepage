@@ -60,6 +60,10 @@
   font-size: 16px;
 }
 
+.g {
+  font-weight: bold;
+}
+
 .searchy{
   color: #89dceb;
 }
@@ -213,14 +217,14 @@ header img {
   background: none;
   display: inline;
   border: none;
-  color: var(--green);
-  margin: 0 1rem;
+  color: var(--main-text-color-secondary);
+  margin: 0;
   font-size: 1rem;
 }
 .search:hover { border: var(--border-size) solid var(--green); }
 .search form { display: inline; }
 .search input:focus { outline: none; }
-.search input[type="text"] { width: 60%; }
+.search input[type="text"] { width: 60%; font-family: "Iosevka"; }
 
 /* greeting */
 .greeting {
@@ -299,8 +303,8 @@ header img {
   justify-content: flex-start;
 }
 .col .links:hover {
-  opacity: 0.7;
-	transition: opacity 0.1s;
+  opacity: 0.8;
+	transition: opacity 0.5s;
 }
 .col .links * {
   user-select: none;
