@@ -1,2 +1,2 @@
-# homepage
-JSless mod of [glide](https://github.com/KraXen72/glide)
+# Homepage
+JSless modification of [glide](https://github.com/KraXen72/glide). Uses [Catppuccin](https://github.com/catppuccin/) color palette.
